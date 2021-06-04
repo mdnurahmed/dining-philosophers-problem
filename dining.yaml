@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  dining:
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: .

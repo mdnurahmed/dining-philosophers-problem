@@ -28,3 +28,18 @@ Cause in the begining at least 1 phiosophers gets to eat meaning he has both the
 
 ## Why there will be no starvation 
 Because whenever a goroutine blocks the GO scheduler runs an awaiting runnable goroutine putting the blocked goroutine in a queue. There will never be a time when all goroutines are asleep in this solution . 
+
+## How to run 
+
+using go 
+```
+go run philosophers.go
+```
+or using docker 
+```
+docker-compose -f dining.yaml up --build
+docker run -it dining-philosophers-problem_dining /bin/sh
+go run philosophers.go
+exit
+docker-compose -f dining.yaml down
+```
