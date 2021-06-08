@@ -24,7 +24,7 @@ Each philosopher can keep doing three things in this serial :
 We can simulate chopstick using channels.Restaurent object serves the chopsticks at first . Each philosopher waits for the required chopsticks . When he is done eating he returns the chopsticks (by sending true signal). 
 
 ## Why there will be no deadlock 
-Cause in the begining at least 1 phiosophers gets to eat meaning he has both the chopsticks .Other chopsticks are acquire by others by that time . So there will never be a time when each philosopher just has one chopstick and waiting for the other one . 
+Cause in the begining at least 1 phiosophers gets to eat meaning he has both the chopsticks .Other chopsticks are acquired by others by that time . So there will never be a time when each philosopher just has one chopstick and waiting for the other one . 
 
 ## Why there will be no starvation 
 Because whenever a goroutine blocks the GO scheduler runs an awaiting runnable goroutine putting the blocked goroutine in a queue. There will never be a time when all goroutines are asleep in this solution . 
